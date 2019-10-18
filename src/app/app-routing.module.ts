@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     redirectTo: '/cars',
     pathMatch: 'full'
   },
-  { path: 'car',
+  { path: 'cars/:plateNumber',
     component: CarDetailComponent
   },
   { path: 'cars',

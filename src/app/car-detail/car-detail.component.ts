@@ -1,5 +1,9 @@
+import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
+import { CarService } from '../car.service';
+import { Car } from '../car';
 
 @Component({
   selector: 'app-car-detail',
@@ -8,9 +12,18 @@ import { Input } from '@angular/core';
 })
 export class CarDetailComponent implements OnInit {
 
-  constructor() { }
+  car: Car;
+
+  constructor(
+    private carService: CarService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap.pipe(
+        switchMap((params: ParamMap) =>
+          this.carService.getCar(params.get('plateNumber')))
+      ).subscribe(car => this.car = car);
   }
 
 }

@@ -1,11 +1,14 @@
-<h2>Cars</h2>
+____________________________________________________________________
+<h3>Part of the screen displayed by default or when "Cars to be rented" is selected</h3>
+
+<h2>Cars to be rented: </h2>
 
 <div *ngFor="let car of cars">
 
   <h3>
-    {{ car.brand }}
+    {{ car.brand }} => {{car.price}} euros
   </h3>
 
-  <a [routerLink]="['/car/']">Details</a>
+  <a [routerLink]="'/cars/' + car.plateNumber">Details</a>
 
 </div>
