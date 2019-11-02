@@ -14,7 +14,6 @@ export class CarService {
   }
 
   getCar(plateNumber: string): Promise<Car> {
-  console.log(plateNumber + " " + CARS.find(car => car.plateNumber==plateNumber));
     return Promise.resolve(CARS.find(car => car.plateNumber==plateNumber));
   }
 
