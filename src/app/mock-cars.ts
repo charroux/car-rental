@@ -4,16 +4,11 @@ export const CARS: Car[] = [
   {
       brand: 'Ferrari',
       price: 799,
-      plateNumber: 'AA11BB'
+      plateNumber: '11AA22'
     },
     {
       brand: 'Porshe',
       price: 699,
-      plateNumber: 'BB22CC'
-    },
-    {
-      brand: 'Maserati',
-      price: 299,
-      plateNumber: 'CC33DD'
+      plateNumber: '33BB44'
     }
 ];

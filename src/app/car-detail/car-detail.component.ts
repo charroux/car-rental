@@ -21,9 +21,13 @@ export class CarDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.pipe(
-        switchMap((params: ParamMap) =>
-          this.carService.getCar(params.get('plateNumber')))
-      ).subscribe(car => this.car = car);
+      switchMap((params: ParamMap) =>
+        this.carService.getCar(params.get('plateNumber')))
+    ).subscribe(car => this.car = car);
+    /*this.route.paramMap.pipe(
+          switchMap((params: ParamMap) =>
+            this.carService.getCarWithObservable(params.get('plateNumber')))
+        ).subscribe(car => this.car = car);*/
   }
 
 }

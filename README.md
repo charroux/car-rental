@@ -1,3 +1,12 @@
+
+# Setup for Angular
+
+https://angular.io/guide/setup-local
+
+# Setup for Http
+
+npm install --save rxjs-compat
+
 # CarRental
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
@@ -5,6 +14,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## A rest web service for the backend
+
+https://github.com/charroux/WebServiceForAngular
 
 ## Code scaffolding
 
